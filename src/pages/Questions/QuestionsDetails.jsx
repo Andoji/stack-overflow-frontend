@@ -80,8 +80,8 @@ const QuestionsDetails = () => {
                                <p className='question-body'>{question.questionBody}</p>
                                <div className='question-details-tags'>
                                   {
-                                    question.questionTags.map((tag)=>(
-                                        <p key={tag}>{tag}</p>
+                                    question.questionTags.map((tag, index)=>(
+                                        <p key={index}>{tag}</p>
                                     ))
                                   }
                                </div>
@@ -124,8 +124,8 @@ const QuestionsDetails = () => {
                         <p>
                             Browser other Question tagged
                             {
-                                question.questionTags.map((tag) =>(
-                                    <Link to='/Tags' key={tag} className='ans-tags'> {tag} </Link>
+                                question.questionTags.map((tag, index) =>(
+                                    <Link to='/Tags' key={index} className='ans-tags'> {tag} </Link>
                                 ))
                             } or {
                                 <Link to='/AskQuestion' style={{textDecoration:"none", color:"#009dff"}}>ask your own question.</Link>
